@@ -5,26 +5,23 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Notification extends Model
+class Category extends Model
 {
     use HasFactory;
-
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-
     protected $fillable = [
-        'user_id',
-        'type',
-        'message',
-        'is_read',
+        'name',
+        'icon',
     ];
 
-    //  الإشعار يخص مستخدم معين
-    public function user()
+    //  كل فئة تحتوي على خدمات متعددة
+    public function services()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Service::class);
     }
 }

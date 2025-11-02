@@ -2,31 +2,34 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
-    /**
+   /**
      * The attributes that are mass assignable.
      *
-     * @var list<string>
+     * @var array
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+   protected $fillable = [
+    'name',
+    'email',
+    'password',
+    'phone',
+    'role', // client / technician / admin
+    'location',
+    'bio',
+    'image',
+    'rating_avg',
+];
+
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
+     * Hidden attributes when serializing the model.
      */
     protected $hidden = [
         'password',
@@ -34,15 +37,50 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * Attribute casting.
      */
-    protected function casts(): array
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    /*----------------------------------------
+     | //?  Relationships
+     ----------------------------------------*/
+
+    //  العميل عنده حجوزات كثيرة
+    public function clientBookings()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->hasMany(Booking::class, 'client_id');
     }
+
+    //  الفني عنده حجوزات كثيرة 
+    public function technicianBookings()
+    {
+        return $this->hasMany(Booking::class, 'technician_id');
+    }
+
+    //  الفني يقدّم خدمات (many-to-many)
+    public function services()
+    {
+        return $this->belongsToMany(Service::class, 'technician_services');
+    }
+
+    //  الفني الواحد عنده عدة مواعيد متاحة
+    public function schedules()
+    {
+    return $this->hasMany(Schedule::class, 'technician_id');
+    }
+
+    //  المستخدم عنده تقييمات 
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'user_id');
+    }
+
+    //  المستخدم يستقبل إشعارات
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
 }
