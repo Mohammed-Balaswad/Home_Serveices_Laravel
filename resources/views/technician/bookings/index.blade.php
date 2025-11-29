@@ -60,7 +60,7 @@
                     <form action="{{ route('technician.bookings.updateStatus', $booking->id) }}" method="POST" class="flex gap-2 items-center">
                         @csrf
                         <input type="hidden" name="status" value="accepted">
-                        <input type="number" name="agreed_price" placeholder="السعر المتفق" class="border px-2 py-1 rounded w-28" required>
+                        <input type="number" name="agreed_price" placeholder="السعر المتفق" class="border px-2 py-1 rounded w-36" required>
                         <button type="submit" class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition">
                             قبول
                         </button>
