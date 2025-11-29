@@ -13,19 +13,19 @@
 
 
 ### 🔹 لوحة تحكم المدير (Admin Dashboard)
-![Admin Dashboard](https://raw.githubusercontent.com/Mohammed-Balaswad/repo/master/screenshots/admin_dashboard.png)
+![Admin Dashboard](https://raw.githubusercontent.com/Mohammed-Balaswad/Home_Serveices_Laravel/master/screenshots/admin_dashboard.png)
 
 ### 🔹 إدارة الفنيين (Admin)
-![Admin_Technicians](https://raw.githubusercontent.com/Mohammed-Balaswad/repo/main/screenshots/admin_technicians.png)
+![Admin_Technicians](https://raw.githubusercontent.com/Mohammed-Balaswad/Home_Serveices_Laravel/master/screenshots/admin_technicians.png)
 
 ### 🔹 إدارة الحجوزات (Admin)
-![Admin_Bookings](https://raw.githubusercontent.com/Mohammed-Balaswad/repo/main/screenshots/admin_bookings.png)
+![Admin_Bookings](https://raw.githubusercontent.com/Mohammed-Balaswad/Home_Serveices_Laravel/master/screenshots/admin_bookings.png)
 
 ### 🔹 حجوزات الفني (technician)
-![Technician Bookings](https://raw.githubusercontent.com/Mohammed-Balaswad/repo/main/screenshots/technician_bookings.png)
+![Technician Bookings](https://raw.githubusercontent.com/Mohammed-Balaswad/Home_Serveices_Laravel/master/screenshots/technician_bookings.png)
 
 ### 🔹 مواعيد الفني (technician)
-![Technician schedules](https://raw.githubusercontent.com/Mohammed-Balaswad/repo/main/screenshots/technician_schedules.png)
+![Technician schedules](https://raw.githubusercontent.com/Mohammed-Balaswad/Home_Serveices_Laravel/master/screenshots/technician_schedules.png)
 
 
 
@@ -77,7 +77,7 @@
 ## 🧱 بنية قاعدة البيانات (ERD)
 
 
-![ERD](https://raw.githubusercontent.com/Mohammed-Balaswad/repo/main/screenshots/ERD.png)
+![ERD](https://raw.githubusercontent.com/Mohammed-Balaswad/Home_Serveices_Laravel/master/screenshots/ERD.png)
 
 ---
 
