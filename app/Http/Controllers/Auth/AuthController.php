@@ -67,10 +67,11 @@ class AuthController extends Controller
         }
 
         if ($user->role === 'technician') {
-            return redirect()->route('dashboard.technician');
+            return redirect()->route('technician.dashboard');
         }
 
-        return redirect()->route('dashboard.client');
+        
+        return redirect()->route('client.home');
     }
 
     // تسجيل الخروج

@@ -30,13 +30,6 @@ class Review extends Model
     //  الفني الذي تم تقييمه (من خلال الحجز)
     public function technician()
     {
-        return $this->hasOneThrough(
-            User::class,
-            Booking::class,
-            'id',            // المفتاح المحلي في جدول bookings
-            'id',            // المفتاح المحلي في جدول users
-            'booking_id',    // المفتاح في جدول reviews
-            'technician_id'  // المفتاح في جدول bookings
-        );
+    return $this->belongsTo(User::class, 'technician_id');
     }
 }

@@ -19,7 +19,7 @@
 </form>
 
 
-
+ 
     {{-- زر إضافة خدمة جديدة --}}
     <div class="flex justify-end mb-6">
         <a href="{{ route('admin.users.create') }}"
@@ -73,5 +73,10 @@
 
 </div>
         
+    </div>
+
+    {{-- Pagination --}}
+    <div class="mt-6">
+        {{ $users->links() }}
     </div>
 </x-layouts.admin>

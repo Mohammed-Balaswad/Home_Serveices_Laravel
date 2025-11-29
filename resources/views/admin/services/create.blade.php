@@ -8,6 +8,9 @@
             <div>
                 <label class="block text-sm font-medium text-gray-700">اسم الخدمة</label>
                 <input type="text" name="name" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm" required>
+                @error('name')
+                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+            @enderror
             </div>
 
             <div>
@@ -19,9 +22,12 @@
                 <label class="block text-sm font-medium text-gray-700">التصنيف</label>
                 <select name="category_id" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm" required>
                     @foreach($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option value="{{ $category->id }} ?? ''">{{ $category->name }}</option>
                     @endforeach
                 </select>
+                @error('category_id')
+                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+            @enderror
             </div>
             <div>
     <label class="block text-sm font-medium text-gray-700">الفنيون المرتبطون بالخدمة</label>
@@ -37,6 +43,9 @@
             <div>
                 <label class="block text-sm font-medium text-gray-700">السعر الأساسي</label>
                 <input type="number" step="0.01" name="base_price" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm" required>
+                @error('base_price')
+                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+            @enderror
             </div>
 
             <div>

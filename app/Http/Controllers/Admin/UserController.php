@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(Request $request)
-{
+    {
     $search = $request->query('search');
-    $role   = $request->query('role'); // فلترة حسب الدور (عميل / فني)
+    $role   = $request->query('role'); 
 
     $users = User::where('role', '!=', 'admin')
         ->when($role, fn($q) => $q->where('role', $role))
@@ -26,7 +26,7 @@ class UserController extends Controller
         ->paginate(15);
 
     return view('admin.users.index', compact('users', 'search', 'role'));
-}
+    }
 
     // عرض فورم إضافة مستخدم
     public function create()
