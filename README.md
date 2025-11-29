@@ -87,9 +87,9 @@
 ```bash
 git clone https://github.com/Mohammed-Balaswad/Home_Services_Laravel.git
 cd Home_Services_Laravel
+```
 
-
-2️⃣ تثبيت الاعتماديات
+2️⃣### تثبيت الاعتماديات
 ```bash
 composer install
 npm install
