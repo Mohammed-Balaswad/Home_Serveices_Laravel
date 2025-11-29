@@ -12,6 +12,7 @@
 ## 📸 معاينة سريعة (Screenshots)
 
 
+
 ### 🔹 لوحة تحكم المدير (Admin Dashboard)
 ![Admin Dashboard](https://raw.githubusercontent.com/Mohammed-Balaswad/Home_Serveices_Laravel/master/screenshots/admin_dashboard.png)
 
@@ -89,16 +90,20 @@ git clone https://github.com/Mohammed-Balaswad/Home_Services_Laravel.git
 cd Home_Services_Laravel
 ```
 
-2️⃣### تثبيت الاعتماديات
+---
+
+2️⃣ تثبيت الاعتماديات
 ```bash
 composer install
 npm install
-
+```
+---
 
 3️⃣ نسخ ملف البيئة
 ```bash
 cp .env.example .env
-
+```
+---
 
 4️⃣ ضبط قاعدة البيانات
 - أنشئ قاعدة بيانات جديدة
@@ -107,28 +112,32 @@ cp .env.example .env
 DB_DATABASE=home_services_db
 DB_USERNAME=root
 DB_PASSWORD=
-
+```
+---
 
 5️⃣ إنشاء مفتاح التطبيق
 ```bash
 php artisan key:generate
-
+```
+---
 
 6️⃣ تنفيذ المايجريشن + Seeder
 ```bash
 php artisan migrate --seed
-
+```
+---
 
 7️⃣ تشغيل النظام
 ```bash
 php artisan serve
 npm run dev
+```
 
-
+---
 ---
 
  ## 📁 بنية المشروع
-
+```bash
 app/
  ├── Http/
  │   ├── Controllers/
@@ -147,7 +156,7 @@ resources/
 routes/
  ├── web.php
  └── api.php
-
+```
 
 ---
 
